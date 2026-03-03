@@ -1,0 +1,5 @@
+Explain what is earth
+Explain recursion
+Write python quicksort
+Solve 2x + 3 = 11
+Summarize artificial intelligence in 100 words

@@ -25,7 +25,22 @@ while True:
     if prompt == "exit":
         break
 
-    answer = run_model(model_name, prompt)
+    try:
+        result = run_model(model_name, prompt, temperature=0)
 
-    print("\nAnswer:")
-    print(answer)
+        print("\nAnswer:")
+        print(result.answer)
+        print("Confidence:", result.confidence)
+
+    except Exception as e:
+        print("\nError:", e)
+        print("Retrying once...\n")
+
+        try:
+            result = run_model(model_name, prompt, temperature=0)
+            print("\nAnswer:")
+            print(result.answer)
+            print("Confidence:", result.confidence)
+
+        except:
+            print("Model failed twice. Skipping.")

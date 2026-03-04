@@ -1,6 +1,7 @@
 from assistant.config import MODELS
 from assistant.model_runner import run_model
 from assistant.benchmark import benchmark_model
+from assistant.temperature import run_temperature_experiment
 
 print("Local AI Assistant\n")
 
@@ -19,7 +20,7 @@ if model_name is None:
 
 print("\nUsing model:", model_name)
 
-mode = input("\nChoose mode: (1) Chat  (2) Benchmark : ")
+mode = input("\nChoose mode: (1) Chat  (2) Benchmark  (3) Temperature Test : ")
 
 if mode == "1":
 
@@ -61,6 +62,18 @@ elif mode == "2":
     print("Tokens:", stats["tokens"])
     print("Tokens/sec:", round(stats["tokens_per_second"], 2))
     print("Memory Usage:", round(stats["memory_usage_gb"], 2), "GB")
+
+elif mode == "3":
+
+    prompt = input("\nEnter prompt for temperature testing: ")
+
+    results = run_temperature_experiment(model_name, prompt)
+
+    print("\nTemperature Experiment Results:\n")
+
+    for temp, output in results.items():
+        print(f"\n--- Temperature {temp} ---")
+        print(output)
 
 else:
     print("Invalid mode selected.")

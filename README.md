@@ -34,4 +34,4 @@ ollama pull phi
 
 Run assistant:
 
-python assistant.py
+python main.py

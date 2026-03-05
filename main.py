@@ -2,25 +2,28 @@ from assistant.config import MODELS
 from assistant.model_runner import run_model
 from assistant.benchmark import benchmark_model
 from assistant.temperature import run_temperature_experiment
+from assistant.comparison import run_model_comparison
 
 print("Local AI Assistant\n")
 
-print("Select Model:")
+mode = input("\nChoose mode: (1) Chat (2) Benchmark (3) Temperature Test (4) Model Comparison : ")
 
-for key in MODELS:
-    print(f"{key} -> {MODELS[key]}")
+if mode in ["1", "2", "3"]:
 
-choice = input("\nEnter choice: ")
+    print("\nSelect Model:")
 
-model_name = MODELS.get(choice)
+    for key in MODELS:
+        print(f"{key} -> {MODELS[key]}")
 
-if model_name is None:
-    print("Invalid choice")
-    exit()
+    choice = input("\nEnter choice: ")
 
-print("\nUsing model:", model_name)
+    model_name = MODELS.get(choice)
 
-mode = input("\nChoose mode: (1) Chat  (2) Benchmark  (3) Temperature Test : ")
+    if model_name is None:
+        print("Invalid model choice")
+        exit()
+
+    print("\nUsing model:", model_name)
 
 if mode == "1":
 
@@ -74,6 +77,12 @@ elif mode == "3":
     for temp, output in results.items():
         print(f"\n--- Temperature {temp} ---")
         print(output)
+
+elif mode == "4":
+
+    print("\nRunning model comparison across all prompts and models...\n")
+
+    run_model_comparison()
 
 else:
     print("Invalid mode selected.")

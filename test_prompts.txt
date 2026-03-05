@@ -1,5 +1,10 @@
-Explain what is earth
 Explain recursion
-Write python quicksort
+Explain what is Earth
+Write python code for factorial
 Solve 2x + 3 = 11
-Summarize artificial intelligence in 100 words
+Explain neural networks
+Summarize artificial intelligence
+What is machine learning
+Explain binary search
+Write quicksort algorithm
+Explain gravity

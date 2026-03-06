@@ -12,3 +12,31 @@ Temperature 0.7:
 Happiness is a positive emotional state characterized by feelings of joy, contentment, and well-being. It is often associated with experiences that bring pleasure, fulfillment, and satisfaction. Happiness can be experienced in various aspects of life, such as relationships, work, health, and personal achievements. It is considered essential for human flourishing and overall quality of life.
 
 ============================================================
+
+Model: mistral:7b-instruct-q4_0
+Prompt: Explain recursion
+
+Temperature 0:
+Recursion is a programming technique where a function calls itself repeatedly until a specific condition is met. This allows for the solution of complex problems by breaking them down into smaller, more manageable sub-problems. Recursion can be used to solve a wide range of problems, including sorting algorithms, searching algorithms, and mathematical calculations. The confidence level for this answer is 0.99.
+
+Temperature 0.3:
+Recursion is a programming technique where a function calls itself repeatedly until a specific condition is met. This allows for the solution of complex problems by breaking them down into smaller, more manageable sub-problems. The confidence level for this explanation is 0.9.
+
+Temperature 0.7:
+Recursion is a method of problem-solving where a function solves a problem by invoking itself with modified parameters until a specific condition is met. Recursive functions must have a base case and a recursive case. The base case is the stopping condition, and the recursive case is the case where the function calls itself with modified parameters. Recursion can be used to solve problems such as factorial calculation, binary search, and sorting algorithms.
+
+============================================================
+
+Model: mistral:7b-instruct-q5_0
+Prompt: Explain what is sadness
+
+Temperature 0:
+Sadness is a complex human emotion characterized by feelings of disappointment, despair, and loss. It is often associated with negative experiences and can be triggered by various factors such as personal loss, failure, or social rejection. Sadness can range from mild to severe and can interfere with daily life if left untreated. It is important to recognize and address feelings of sadness in oneself and others, as it can lead to improved mental health and well-being.
+
+Temperature 0.3:
+Sadness is a complex human emotion characterized by feelings of disappointment, grief, or loss. It is often associated with a range of physical and psychological symptoms, such as decreased energy, changes in appetite and sleep patterns, and feelings of hopelessness and helplessness. Sadness can be triggered by a variety of factors, including personal loss, trauma, or chronic stress, and can vary in intensity and duration.
+
+Temperature 0.7:
+Sadness is a complex human emotion characterized by feelings of disappointment, sorrow, and despondency. It is a natural response to loss, disappointment, or failure, and can also be triggered by various life events such as the death of a loved one, a breakup, or a personal setback. Sadness is often accompanied by physical symptoms such as tears, a loss of appetite, and feelings of fatigue. While it is normal to experience sadness at times, prolonged or intense sadness may indicate a mental health condition such as depression.
+
+============================================================

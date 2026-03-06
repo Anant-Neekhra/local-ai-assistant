@@ -32,16 +32,18 @@ def benchmark_model(model_name, prompt, temperature=0):
 
     output_text = response['message']['content']
 
-    token_count = len(output_text.split())
+    char_count = len(output_text)
 
-    tokens_per_second = token_count / total_latency if total_latency > 0 else 0
+    estimated_tokens = char_count / 4
+
+    tokens_per_second = estimated_tokens / total_latency if total_latency > 0 else 0
 
     memory_usage_gb = get_ollama_memory()
 
     return {
         "model": model_name,
         "latency": total_latency,
-        "tokens": token_count,
+        "tokens": estimated_tokens,
         "tokens_per_second": tokens_per_second,
         "memory_usage_gb": memory_usage_gb
     }

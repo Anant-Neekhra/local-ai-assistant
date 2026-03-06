@@ -23,9 +23,9 @@ def run_model_comparison(prompts_file="test_prompts.txt"):
             results.append({
                 "model": model_name,
                 "prompt": prompt,
-                "latency": stats["latency"],
-                "tokens_per_second": stats["tokens_per_second"],
-                "memory_gb": stats["memory_usage_gb"]
+                "latency": round(stats["latency"], 2),
+                "tokens_per_second": round(stats["tokens_per_second"], 2),
+                "memory_gb": round(stats["memory_usage_gb"], 2)
             })
 
     save_results(results)
